@@ -1,0 +1,54 @@
+<header class="mat-typography my-3">
+    <h1>Dyslexie</h1>
+</header>
+<div class="button_space">
+    <button mat-raised-button class="spacer" aria-label="Return home" routerLink="/home">
+        <mat-icon>arrow_back_ios_new</mat-icon> <span>{{'terug' | translate }}</span>
+    </button>
+</div>
+<div class="mat-typography paragraph">
+    <section>
+        <header>
+            <h2>Wat is dyslexie?</h2>
+        </header>
+        <article>
+            <p>
+                Dyslexie betekent dat iemand met het lezen, schrijven en zelfs spellen moeite heeft. Een persoon die
+                dyslexie heeft, afhankelijk van de leeftijd en het onderwijsniveau wel een gemiddelde intelligentie
+                heeft.
+                als er een andere leesproblemen worden verklaart, is er een spraken van dyslexie.
+                Dyslexie komt uit het grieks en latijnse term, want dys betekent niet goed functioneren en lexis
+                betekent taal of woorden.
+                Er zijn meerdere theorieën in omloop over de oorzaak van dyslexie. Drie veel voorkomende theorieën zijn:
+                Er gaan iets mis in de aanleg van de hersenen waardoor de linker hersenhelft langzamer ontwikkelt dan de
+                rechter helft.
+            </p>
+        </article>
+    </section>
+    <section>
+        <header>
+            <h2>Dyslexie feature</h2>
+        </header>
+        <article>
+            <p>
+                Het meest vergetende stoornis is dyslexie, omdat er in sommige websites geen features zijn om dyslexie
+                te kunnen oplossen.
+                Daarom is er besloten om deze feature te implementeren, zodat iedereen die aan dyslexie lijden, deze
+                feature kunnen gebruiken.
+                Deze feature lost dit probleem op door de font te veranderen naar openDyslexicfont.
+            </p>
+        </article>
+    </section>
+    <section>
+        <header>
+            <h2>Dyslexie mode feature</h2>
+        </header>
+        <article>
+            <div class="slide">
+                <mat-slide-toggle rol="switch" aria-label="{{'dyslexie' | translate}}" [ngModel]="dyslexia"
+                    [formControl]="fontControl">
+                    <label>{{'dyslexie' | translate}}</label>
+                </mat-slide-toggle>
+                </div>
+        </article>
+            </section>

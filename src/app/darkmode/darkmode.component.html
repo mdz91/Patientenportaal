@@ -1,0 +1,46 @@
+<header class="mat-typography my-3">
+    <h1>{{'darkmode' | translate }}</h1>
+</header>
+<div class="mat-typography button_space">
+    <button mat-raised-button aria-label="Return home" class="spacer"  routerLink="/home">
+        <mat-icon>arrow_back_ios_new</mat-icon> <span>{{'terug' | translate }}</span>
+    </button>
+</div>
+<section>
+    <header>
+        <h2>Wat is dark mode?</h2>
+    </header>
+    <article>
+        <p>
+            Nacht mode, ook wel 'dark mode' genoemd, is een toegankelijkheidsfeature dat de interface van kleur verandert naar donker achtergrond en lichtere letters. 
+            Deze feature wordt voor het slapen gaan gebruikt, wanneer de gebruikers vermoeidende ogen hebben. 
+            Volgens de artikel van greenberry is gebleken dat met de dank aan Google, Apple, Wondows en Slack kreeg dark mode rond 2019 meer aandacht.       </p>
+    </article>
+</section>
+
+<section>
+    <header>
+        <h2>Dark mode feature</h2>
+    </header>
+    <article>
+        <p>
+            Sommige vergeten zelfs dat dark mode een toegankelijkheidsfeature is, want het heeft te maken met o.a. visuele beperkingen.  
+            Lichtgevoeligheid is een onderdeel van visuele stoornis. Het blijkt dat dark mode langer wordt gebruikt omdat het voor overzicht en rust zorgt. 
+            Voor die reden is het voor de smartphone batterijen voordeliger en het verbruikt minder energie.  
+         </p>
+   </article>
+</section>
+<section>
+    <article>
+        <div class="darkSlide">
+            <mat-icon class="">light_mode</mat-icon>
+            <mat-slide-toggle class="slide spacer" aria-label="darkmode" aria-selected="true" [ngModel]="darkTheme"
+                [formControl]="darkModeControl">
+                <span>{{'darkmode' | translate}}</span>
+            </mat-slide-toggle>
+            <mat-icon>dark_mode</mat-icon>
+        </div>
+        
+    </article>
+        
+</section>

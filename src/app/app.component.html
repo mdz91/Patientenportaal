@@ -1,0 +1,112 @@
+<nav class="nm-fixed-height">
+  <mat-toolbar rol="toolbar" aria-label="menubar" color="primary" aria-live="polite">
+    <mat-toolbar-row>
+      <mat-slide-toggle rol="switch" attr.aria-label="{{'dyslexie' | translate}}" [ngModel]="dyslexia"
+        [formControl]="fontControl">
+        <label>Dyslexie mode</label>
+      </mat-slide-toggle>
+      <mat-icon>type_specimen</mat-icon>
+      <span>{{'patientenportaal' | translate}}</span>
+      <a mat-button class="nm-spacer" routerLink="home" attr.aria-label="{{'home' | translate }}">
+        <mat-icon>home</mat-icon><span>{{'home' | translate }}</span>
+      </a>
+      <a mat-button class="nm-spacer" routerLink="mijn-gegevens" attr.aria-label="{{'my-gegevenstitle' | translate }}">
+        <mat-icon>person</mat-icon><span>{{'my-gegevenstitle' | translate }}</span>
+      </a>
+      <button mat-button class="nm-spacer" [matMenuTriggerFor]="menu" attr.aria-label="{{'dossier' | translate }}">
+        <mat-icon>folder</mat-icon><span>{{'dossier' | translate }}</span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="dossier">Dossier</a>
+        <a mat-menu-item routerLink="home">Allergieën</a>
+        <a mat-menu-item routerLink="home">Behandelbeperking</a>
+        <a mat-menu-item routerLink="home">Conclusie en beleid</a>
+        <a mat-menu-item routerLink="home">Correspondentie</a>
+        <a mat-menu-item routerLink="home">Diagnoses</a>
+        <a mat-menu-item routerLink="home">Familieanamnese</a>
+        <a mat-menu-item routerLink="home">Implantaten</a>
+        <a mat-menu-item routerLink="home">Informed consent</a>
+        <a mat-menu-item routerLink="home">Intoxicaties</a>
+        <a mat-menu-item routerLink="home">Metingen</a>
+        <a mat-menu-item routerLink="home">Persoonlijke gezondheidsomgeving</a>
+        <a mat-menu-item routerLink="home">Sociale anamnese</a>
+        <a mat-menu-item routerLink="home">Uitslagen</a>
+        <a mat-menu-item routerLink="home">Voorgeschiedenis</a>
+      </mat-menu>
+      <a mat-button class="nm-spacer" routerLink="afspraken" attr.aria-label="{{'afspraak' | translate }}">
+        <mat-icon>date_range</mat-icon>
+        <span>{{'afspraak' | translate }}</span>
+      </a>
+
+      <a mat-button class="nm-spacer" routerLink="medicatie"  attr.aria-label="{{'medicatie' | translate }}">
+        <mat-icon aria-hidden="false">medication</mat-icon>
+        <span>{{'medicatie' | translate }}</span>
+      </a>
+
+      <a mat-button class="nm-spacer" routerLink="taken" attr.aria-label="{{'taken' | translate }}">
+        <mat-icon>task</mat-icon>
+        <span>{{'taken' | translate }}</span>
+      </a>
+
+      <button mat-button class="nm-spacer" [matMenuTriggerFor]="appMenu" aria-label="App Menu">
+        <mat-icon>apps</mat-icon>
+      </button>
+      <mat-menu #appMenu="matMenu">
+        <a mat-menu-item class="nm-spacer" routerLink="opnames" attr.aria-label="{{'opnames' | translate }}">
+          <mat-icon>local_hospital</mat-icon>
+          <span>{{'opnames' | translate }}</span>
+        </a>
+        <a mat-menu-item class="nm-spacer" routerLink="patientenvoorlichting"
+          attr.aria-label="{{'patiëntenvoorlichting' | translate }}">
+          <mat-icon>health_and_safety</mat-icon>
+          <span>{{'patiëntenvoorlichting' | translate }}</span>
+        </a>
+
+        <a mat-menu-item class="nm-spacer" routerLink="e-consult" attr.aria-label="{{'e-consult' | translate }}">
+          <mat-icon>task</mat-icon>
+          <span>{{'e-consult' | translate }}</span>
+        </a>
+
+      </mat-menu>
+      <a mat-button class="nm-spacer" attr.aria-label="{{'login' | translate }}">
+        <mat-icon>account_circle</mat-icon>
+        <span>{{'login' | translate }}</span>
+      </a>
+      <mat-icon>light_mode</mat-icon>
+      <mat-slide-toggle color="accent" aria-label="darkmode" aria-selected="true" [ngModel]="darkTheme"
+        [formControl]="darkModeControl">
+        <label>Dark mode</label>
+      </mat-slide-toggle>
+      <mat-icon>dark_mode</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</nav>
+
+<!-- Main Content-->
+<main class="nm-fill-height mat-typography px-5 my-5">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="nm-footer mat-typography text-center text-white">
+  <!-- Grid container -->
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <span>&copy; 2022 Copyright</span>
+  <mat-label class="mx-3">{{'selectlanguage' | translate }}</mat-label>
+  <mat-form-field  class="nm-form-field mat-typography languageselectcenter select-text" 
+    appearance="outline">
+    <mat-select attr.aria-label="{{'selectlanguage' | translate }}" [(value)]="defaultSelect"  (selectionChange)="selectLanguage($event.value)">
+      <mat-option value="nl">{{'language.dutch' | translate }}</mat-option>
+      <mat-option value="en">{{'language.english' | translate }}</mat-option>
+      <mat-option value="en-US">{{'language.english' | translate }}({{'verenigde-staten' | translate}})</mat-option>
+      <mat-option value="ar">{{'language.arabic' | translate }}</mat-option>
+      <mat-option value="ja">{{'language.japans' | translate }}</mat-option>
+      <mat-option value="it">{{'language.italiaans' | translate }}</mat-option>
+      <mat-option value="pt">{{'language.portugees' | translate }}</mat-option>
+      <mat-option value="fr">{{'language.frans' | translate }}</mat-option>
+      <mat-option value="es">{{'language.spaans' | translate }}</mat-option>
+      <mat-option value="tr">{{'language.turks' | translate }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- Copyright -->
+</footer>

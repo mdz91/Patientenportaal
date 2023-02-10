@@ -1,0 +1,15 @@
+h1, h2 {
+    text-align: center;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color:rgb(7, 7, 7);
+  border-radius: 5px;
+  margin-bottom: 10px;
+ }
+
+ .taal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

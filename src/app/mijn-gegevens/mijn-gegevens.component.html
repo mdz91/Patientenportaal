@@ -1,0 +1,60 @@
+ <header class="mat-typography my-3">
+  <h1>{{'my-gegevenstitle' | translate }}</h1>
+</header>
+<section>
+  <mat-card>
+    <header class="my-3">
+      <mat-card-title>
+        <h2>{{'subtitle' | translate }}</h2>
+      </mat-card-title>
+    </header>
+    <form>
+      <mat-form-field class="full_input" appearance="fill">
+        <mat-label>{{'name' | translate}}</mat-label>
+        <input matInput class="input">
+      </mat-form-field>
+      <mat-form-field class="full_input" appearance="fill">
+        <mat-label>{{'lastname' | translate}}</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="full_input" appearance="fill">
+        <mat-label>{{'adres' | translate}}</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="postcode_input" appearance="fill">
+        <mat-label>{{'zipcode' | translate}}</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="woonplaats_input mx-2" appearance="fill">
+        <mat-label>{{'place' | translate}}</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="full_input" appearance="fill">
+        <mat-label>{{'birthdate' | translate}} <mat-icon>cake</mat-icon>
+        </mat-label>
+        <input matInput [matDatepicker]="datepicker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancel</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="full_input" aria-label="select" appearance="fill">
+        <mat-label>{{'sex' | translate}}</mat-label>
+        <mat-select>
+          <mat-option value="Man">{{'man' | translate }}</mat-option>
+          <mat-option value="Vrouw">{{'vrouw' | translate }}</mat-option>
+          <mat-option value="Non binair">Non binair</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <div class="button">
+      <button mat-raised-button color="accent" type="submit" name="Wijzig">{{'edit' | translate}}</button>
+      <button mat-raised-button type="submit" name="Annuleren">{{'cancel' | translate}}</button>
+    </div>
+  </mat-card>
+
+</section>

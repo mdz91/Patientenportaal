@@ -1,0 +1,66 @@
+h1 {
+    text-align: center;
+}
+
+th {
+  justify-content: space-between;
+}
+
+.afspraak_buttons {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    
+}
+
+
+  
+.mat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+    cursor: pointer;
+ 
+}
+
+.mat-table {
+  border-radius: 10px;
+    align-items: top;
+}
+
+.mat-header-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+    padding: 10px;
+}
+
+
+.mat-header-cell {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.mat-cell {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    padding: 10px;
+    cursor: pointer;
+ 
+}
+
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+
+  .mat-select-value {
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+  }

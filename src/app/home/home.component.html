@@ -1,0 +1,60 @@
+<title>Home</title>
+<header class="my-3">
+    <h1>{{'home' | translate }}</h1>
+</header>
+
+<mat-grid-list class="nm-mat-grid-list" cols="3" rowHeight="fit" gutterSize="10px">
+    <mat-grid-tile class="nm-mat-grid-tile">
+        <div>
+            <h2>{{'dyslexie' | translate }}</h2>
+            <p>{{'informatie.dyslexie' | translate }}</p>
+            <button mat-raised-button class="spacer" routerLink="/dyslexie"
+                attr.aria-label="{{'dyslexie' | translate }}">
+                <mat-icon>person</mat-icon><span>{{'dyslexie' | translate }}</span>
+            </button>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="nm-mat-grid-tile">
+        <div>
+            <h2>{{'darkmode' | translate }}</h2>
+            <p>{{'informatie.nachtmodus' | translate }}</p>
+            <button mat-raised-button class="spacer" routerLink="/darkmode"
+                attr.aria-label="{{'darkmode' | translate }}">
+                <mat-icon class="">dark_mode</mat-icon><span>{{'darkmode' | translate }}</span>
+            </button>
+        </div>
+    
+    </mat-grid-tile>
+
+    <mat-grid-tile class="nm-mat-grid-tile">
+        <div>
+            <h2>{{'taalselectie' | translate }}</h2>
+            <p>{{'informatie.taalselectie' | translate }}</p>
+            <button mat-raised-button class="spacer" routerLink="/taalselectie"
+                attr.aria-label="{{'taalselectie' | translate }}">
+                <mat-icon>language</mat-icon><span>{{'taalselectie' | translate }}</span>
+            </button>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="nm-mat-grid-tile">
+        <div>
+            <h2>{{'kleurcontrast' | translate }}</h2>
+            <p>{{'informatie.kleurcontrast' | translate }}</p>
+            <button mat-raised-button class="spacer" routerLink="/kleurcontrast"
+                attr.aria-label="{{'kleurcontrast' | translate }}">
+                <mat-icon>contrast</mat-icon><span>{{'kleurcontrast' | translate }}</span>
+            </button>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="nm-mat-grid-tile">
+        <div>
+            <h2>{{'toegankelijkheid' | translate }}</h2>
+            <p>{{'informatie.toegankelijkheid' | translate }}</p>
+            <button mat-raised-button class="spacer" routerLink="/toegankelijkheid"
+                attr.aria-label="{{'toegankelijkheid' | translate }}">
+                <mat-icon>accessibility</mat-icon><span>{{'toegankelijkheid' | translate }}</span>
+            </button>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

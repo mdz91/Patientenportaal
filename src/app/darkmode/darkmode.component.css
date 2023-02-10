@@ -1,0 +1,12 @@
+h1, h2 {
+    text-align: center;
+}
+
+.darkSlide {
+   text-align: center;
+}
+
+mat-icon {
+    flex-direction: column;
+    justify-content: center;
+}

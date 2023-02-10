@@ -1,0 +1,50 @@
+<h1>{{'afspraak' | translate }}</h1>
+<div class="borderline">
+    
+</div>
+<mat-table [dataSource]="dataSource"  class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="dag">
+      <mat-header-cell *matHeaderCellDef>{{'dag' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.dag}}</mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="datum">
+        <mat-header-cell *matHeaderCellDef>{{'datum' | translate}}</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.datum}}</mat-cell>
+      </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="afspraak">
+      <mat-header-cell *matHeaderCellDef>{{'afspraak' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.afspraak}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef>{{'type' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.type}}</mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="arts">
+      <mat-header-cell *matHeaderCellDef>{{'arts' | translate}}</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.arts}}</mat-cell>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+        mat-row
+        (click)="clickedRows.add(row)"
+        [class.demo-row-is-clicked]="clickedRows.has(row)"
+        *matRowDef="let row; columns: displayedColumns;"
+    ></tr>
+  </mat-table>
+  
+  <div class="afspraak_buttons">
+    <button mat-raised-button color="accent" type="submit" name="toevoegen"><mat-icon>add</mat-icon> {{'toevoegen' | translate}}</button>
+    <button mat-raised-button type="submit" name="wijzigen"><mat-icon>edit</mat-icon> {{'edit' | translate}}</button>
+    <button mat-raised-button color="warn" type="submit" name="Annuleren"><mat-icon>delete</mat-icon> {{'verwijderen' | translate }}</button>
+</div>
+  

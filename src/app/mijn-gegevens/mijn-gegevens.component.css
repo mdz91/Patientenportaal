@@ -1,0 +1,33 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+}
+
+
+h3, h1 {
+    text-align: center;
+}
+
+
+.full_input {
+    width: 80%;
+    height: 10%;
+   
+}
+
+
+mat-form-field {
+    margin-left: 2px;
+}
+
+
+
+.button {
+    display: flex;
+    padding: 60px;
+    justify-content: space-evenly;
+}
+
+

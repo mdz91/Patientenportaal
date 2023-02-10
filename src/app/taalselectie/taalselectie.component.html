@@ -1,0 +1,70 @@
+<header class="my-3">
+    <h1>{{'selectlanguage' | translate }}</h1>
+</header>
+<div class="button_space">
+    <button mat-raised-button aria-label="Return home" routerLink="/home">
+        <mat-icon>arrow_back_ios_new</mat-icon> <span>{{'terug' | translate }}</span>
+    </button>
+</div>
+<div class="paragraph">
+    <section>
+        <header>
+            <h2>Taal</h2>
+        </header>
+        <article>
+            <p>
+                Taal betekent dat een boodschap kan worden overgebracht door middel van communicatie, bijvoorbeeld
+                woordenschat
+                en grammaticaregels.
+                In Nederland lijden mensen aan spraakbeperking, maar dat wilt niet zeggen dat spreken de enige
+                communicatie middel aanwezig is.
+                Er is een alternatieve communicatiemiddel als gebarentaal, voor mensen die niet kunnen spreken.
+                Communiceren is in het dagelijksleven erg belangrijk, zonder communicatie is de kans tot een splitsing
+                tussen gebruikers die elkaar niet goed begrijpen.
+            </p>
+        </article>
+    </section>
+    <section>
+        <header>
+            <h2>Taalbarriére</h2>
+        </header>
+        <article>
+            <p>
+                In het dagelijkse leven hebben mensen te maken met Taalbarriérre, omdat hun gesproken moedertaal niet
+                Nederlands is.
+                Ook weten zij sommige woorden niet of het is voor hen lastig om sommige woorden en zinnen te kunnen
+                lezen en schrijven.
+                Denk maar aan gebruikers die op zakenreis naar verschillende landen gaan.
+                En immigranten die voor een geldige reden naar Nederland zijn geëmigreed, maar de Nederlandse taal niet
+                goed beheerst.
+                Het niet beheersen van de Nederlandse taal kan lijden tot miscommunicatie,
+                wanneer zij een andere taal proberen te spreken.
+                Daarom is de feature Taalselectie gekozen om de Taalbarriéres te verwijderen. De gebruikers hebben de
+                keuze om hun gesproken taal te selecteren. Taal selectie verandert ook de leespositie van rechts naar
+                links, wanneer de gebruiker op Arabische taal kiest.
+            </p>
+
+        </article>
+    </section>
+    <section>
+        <header>
+            <h2>Taalselectie</h2>
+        </header>
+    </section>
+</div>
+<div class="taal">
+    <mat-label>{{'selectlanguage' | translate }}</mat-label>
+    <mat-form-field class="mat-typography arrow" appearance="outline">
+        <mat-select attr.aria-label="{{'selectlanguage' | translate }}" [(value)]="defaultSelect" (selectionChange)="selectLanguage($event.value)">
+            <mat-option value="nl">{{'language.dutch' | translate }}</mat-option>
+            <mat-option value="en-US">{{'language.english' | translate }}</mat-option>
+            <mat-option value="ar">{{'language.arabic' | translate }}</mat-option>
+            <mat-option value="ja">{{'language.japans' | translate }}</mat-option>
+            <mat-option value="it">{{'language.italiaans' | translate }}</mat-option>
+            <mat-option value="pt">{{'language.portugees' | translate }}</mat-option>
+            <mat-option value="fr">{{'language.frans' | translate }}</mat-option>
+            <mat-option value="es">{{'language.spaans' | translate }}</mat-option>
+            <mat-option value="tr">{{'language.turks' | translate }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
